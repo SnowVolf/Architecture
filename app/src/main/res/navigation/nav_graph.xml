@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="ru.svolf.architectre.main.ui.LessonsListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_goToLesson1"
+            app:destination="@id/lessonLifecycleFragment" />
+        <action
+            android:id="@+id/action_goToLesson2"
+            app:destination="@id/lessonLivedataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lessonLifecycleFragment"
+        android:name="ru.svolf.architectre.lesson1.LessonLifecycleFragment"
+        android:label="@string/lesson1_title"
+        tools:layout="@layout/fragment_lesson_lifecycle" />
+    <fragment
+        android:id="@+id/lessonLivedataFragment"
+        android:name="ru.svolf.architectre.lesson2.LessonLivedataFragment"
+        android:label="@string/lesson2_title"
+        tools:layout="@layout/fragment_lesson_livedata" />
+
+</navigation>
