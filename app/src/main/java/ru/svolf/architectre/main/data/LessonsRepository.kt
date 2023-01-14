@@ -13,6 +13,7 @@ class LessonsRepository {
                 it.add(LessonItem().withId(R.id.action_goToLesson2).withTitle(R.string.lesson2_title))
                 it.add(LessonItem().withId(R.id.action_goToLesson3).withTitle(R.string.lesson3_title))
                 it.add(LessonItem().withId(R.id.action_goToLesson4).withTitle(R.string.lesson4_title))
+                it.add(LessonItem().withId(R.id.action_goToLesson5).withTitle(R.string.lesson5_title))
             }
         }
         return lessonsList

@@ -14,4 +14,5 @@
     <string name="lesson2_title">Урок 2. LiveData</string>
     <string name="lesson3_title">Урок 3. LiveData. Дополнительные возможности</string>
     <string name="lesson4_title">Урок 4. ViewModel</string>
+    <string name="lesson5_title">Урок 5. Room с щепоткой Dagger</string>
 </resources>

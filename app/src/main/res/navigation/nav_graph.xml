@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_goToLesson4"
             app:destination="@id/lessonVMFragment" />
+        <action
+            android:id="@+id/action_goToLesson5"
+            app:destination="@id/roomLesson5Fragment" />
     </fragment>
 
     <fragment
@@ -44,5 +47,10 @@
         android:name="ru.svolf.architectre.lesson4.LessonVMFragment"
         android:label="@string/lesson4_title"
         tools:layout="@layout/fragment_lesson4_vm" />
+    <fragment
+        android:id="@+id/roomLesson5Fragment"
+        android:name="ru.svolf.architectre.lesson5.RoomLesson5Fragment"
+        android:label="@string/lesson5_title"
+        tools:layout="@layout/fragment_room5" />
 
 </navigation>
