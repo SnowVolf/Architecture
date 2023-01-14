@@ -2,12 +2,14 @@ package ru.svolf.architectre.main.data
 
 import android.view.View
 import android.widget.TextView
+import androidx.annotation.StringRes
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.items.AbstractItem
 import ru.svolf.architectre.R
 
 class LessonItem : AbstractItem<LessonItem.ViewHolder>() {
-    private var title: String? = null
+    @StringRes
+    private var title: Int? = null
 
     /** The type of the Item. Can be a hardcoded INT, but preferred is a defined id */
     override val type: Int
@@ -26,14 +28,14 @@ class LessonItem : AbstractItem<LessonItem.ViewHolder>() {
         return identifier.toInt()
     }
 
-    fun withTitle(title: String): LessonItem {
+    fun withTitle(title: Int): LessonItem {
         this.title = title
         return this
     }
 
     override fun bindView(holder: ViewHolder, payloads: List<Any>) {
         super.bindView(holder, payloads)
-        holder.title.text = title
+        holder.title.setText(title!!)
     }
 
     override fun unbindView(holder: ViewHolder) {
