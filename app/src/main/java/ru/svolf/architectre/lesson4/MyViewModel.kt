@@ -4,9 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MyViewModel : ViewModel() {
+class MyViewModel : ViewModel {
     // TODO: Implement the ViewModel
     private var data: MutableLiveData<String>? = null
+    private var id: Long? = null
+
+    constructor(id: Long){
+        this.id = id
+    }
 
     fun getData(): LiveData<String?>? {
         if (data == null) {
@@ -17,6 +22,6 @@ class MyViewModel : ViewModel() {
     }
 
     private fun loadData() {
-        data?.postValue(System.currentTimeMillis().toString())
+        data?.postValue(id.toString())
     }
 }

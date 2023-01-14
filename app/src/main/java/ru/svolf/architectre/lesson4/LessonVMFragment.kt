@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
-import ru.svolf.architectre.R
 import ru.svolf.architectre.databinding.FragmentLesson4VmBinding
 
 class LessonVMFragment : Fragment() {
@@ -23,7 +21,7 @@ class LessonVMFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[MyViewModel::class.java]
+        viewModel = ViewModelProvider(this, MyViewModelFactory(System.currentTimeMillis()))[MyViewModel::class.java]
     }
 
     override fun onCreateView(
