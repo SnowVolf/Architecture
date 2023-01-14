@@ -1,19 +1,18 @@
-package ru.svolf.architectre.lesson2;
+package ru.svolf.architectre.lesson2
 
-import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.MutableLiveData
 
-public class DataController {
-    private static DataController instance;
-    private final MutableLiveData<Integer> liveData = new MutableLiveData<>();
+class DataController {
+    val data = MutableLiveData<Int>()
 
-    public static DataController getInstance() {
-        if (instance == null){
-            instance = new DataController();
-        }
-        return instance;
-    }
-
-    public MutableLiveData<Integer> getData(){
-        return liveData;
+    companion object {
+        var instance: DataController? = null
+            get() {
+                if (field == null) {
+                    field = DataController()
+                }
+                return field
+            }
+            private set
     }
 }

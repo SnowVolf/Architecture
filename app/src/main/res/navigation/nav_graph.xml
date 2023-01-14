@@ -16,17 +16,33 @@
         <action
             android:id="@+id/action_goToLesson2"
             app:destination="@id/lessonLivedataFragment" />
+        <action
+            android:id="@+id/action_goToLesson3"
+            app:destination="@id/lessonLiveAdvanced" />
+        <action
+            android:id="@+id/action_goToLesson4"
+            app:destination="@id/lessonVMFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/lessonLifecycleFragment"
         android:name="ru.svolf.architectre.lesson1.LessonLifecycleFragment"
         android:label="@string/lesson1_title"
-        tools:layout="@layout/fragment_lesson_lifecycle" />
+        tools:layout="@layout/fragment_lesson1_lifecycle" />
     <fragment
         android:id="@+id/lessonLivedataFragment"
         android:name="ru.svolf.architectre.lesson2.LessonLivedataFragment"
         android:label="@string/lesson2_title"
-        tools:layout="@layout/fragment_lesson_livedata" />
+        tools:layout="@layout/fragment_lesson2_livedata" />
+    <fragment
+        android:id="@+id/lessonLiveAdvanced"
+        android:name="ru.svolf.architectre.lesson3.LessonLiveAdvanced"
+        android:label="@string/lesson3_title"
+        tools:layout="@layout/fragment_lesson_live_advanced" />
+    <fragment
+        android:id="@+id/lessonVMFragment"
+        android:name="ru.svolf.architectre.lesson4.LessonVMFragment"
+        android:label="@string/lesson4_title"
+        tools:layout="@layout/fragment_lesson4_vm" />
 
 </navigation>

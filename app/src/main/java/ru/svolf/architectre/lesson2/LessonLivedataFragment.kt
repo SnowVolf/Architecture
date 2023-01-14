@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
-import ru.svolf.architectre.R
-import ru.svolf.architectre.databinding.FragmentLessonLivedataBinding
+import ru.svolf.architectre.databinding.FragmentLesson2LivedataBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +22,7 @@ class LessonLivedataFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var _binding: FragmentLessonLivedataBinding? = null
+    private var _binding: FragmentLesson2LivedataBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +37,7 @@ class LessonLivedataFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentLessonLivedataBinding.inflate(inflater, container, false)
+        _binding = FragmentLesson2LivedataBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -47,7 +45,7 @@ class LessonLivedataFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var number = 0
-        val data: MutableLiveData<Int> = DataController.getInstance().data
+        val data: MutableLiveData<Int> = DataController.instance!!.data
         data.observe(viewLifecycleOwner) {
             binding.text.text = it.toString()
         }

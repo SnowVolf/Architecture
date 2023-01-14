@@ -40,10 +40,13 @@ class LessonsListFragment : Fragment() {
         if (itemAdapter.adapterItemCount == 0) {
             itemAdapter.add(
                 LessonItem().withId(R.id.action_goToLesson1).withTitle(getString(R.string.lesson1_title)),
-                LessonItem().withId(R.id.action_goToLesson2).withTitle(getString(R.string.lesson2_title))
+                LessonItem().withId(R.id.action_goToLesson2).withTitle(getString(R.string.lesson2_title)),
+                LessonItem().withId(R.id.action_goToLesson3).withTitle(getString(R.string.lesson3_title)),
+                LessonItem().withId(R.id.action_goToLesson4).withTitle(getString(R.string.lesson4_title))
+
             )
         }
-        fastAdapter.onClickListener = { v: View?, iAdapter: IAdapter<LessonItem>, lessonItem: LessonItem, i: Int ->
+        fastAdapter.onClickListener = { _: View?, _: IAdapter<LessonItem>, lessonItem: LessonItem, _: Int ->
             findNavController().navigate(lessonItem.getId())
             true
         }
