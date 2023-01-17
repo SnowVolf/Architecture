@@ -2,18 +2,15 @@ package ru.svolf.architectre.lesson5
 
 import android.content.Context
 import androidx.room.Room
-import ru.svolf.architectre.App
 
 class DbHelper(context: Context) {
-    private var instance: DbHelper? = null
-    private var employeesDatabase: EmployeesDatabase
+    private var mainDatabase: MainDatabase
 
     init {
-        instance = this
-        employeesDatabase = Room.databaseBuilder(context, EmployeesDatabase::class.java, "database").build()
+        mainDatabase = Room.databaseBuilder(context, MainDatabase::class.java, "database").build()
     }
 
-    fun getDb(): EmployeesDatabase {
-        return employeesDatabase
+    fun getDb(): MainDatabase {
+        return mainDatabase
     }
 }

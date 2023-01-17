@@ -9,9 +9,9 @@ interface EmployeeDao {
     fun getAll(): MutableList<Employee?>?
 
     @Query("SELECT * FROM employee WHERE id = :id")
-    fun getById(id: Long): Employee
+    fun getById(id: Long): Employee?
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(employee: Employee)
 
     @Update
